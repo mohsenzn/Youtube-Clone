@@ -1,10 +1,42 @@
 import React from 'react'
-
-const Sidebar = () => {
+import { Nav } from 'react-bootstrap'
+import './sidebar.scss'
+import {MdSubscriptions,MdExitToApp,MdThumbUp,MdHistory,MdLibraryBooks,MdHome,MdSentimentDissatisfied} from 'react-icons/md'
+const Sidebar = ({sidebar , handleToggleSideBar}) => {
     return (
-        <div className="border border-danger">
-            sidebar
-        </div>
+        <Nav className="sidebar">
+           <li>
+               <MdHome size={23} />
+               <span>Home</span>
+           </li>
+           <li>
+               <MdSubscriptions size={23} />
+               <span>Subscription</span>
+           </li>
+           <li>
+               <MdThumbUp size={23} />
+               <span>LikedVideos</span>
+           </li>
+           <li>
+               <MdHistory size={23} />
+               <span>History</span>
+           </li>
+           <li>
+               <MdLibraryBooks size={23} />
+               <span>Library</span>
+           </li>
+           <li>
+               <MdSentimentDissatisfied size={23} />
+               <span>I Don't Know</span>
+           </li>
+           <hr />
+           <li>
+               <MdExitToApp  size={23} />
+               <span >LogOut</span>
+           </li>
+           <hr />
+            
+        </Nav>
     )
 }
 
