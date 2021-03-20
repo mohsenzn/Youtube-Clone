@@ -1,10 +1,19 @@
 import React from 'react';
-import Header from './Compoenets/Header/Header'
+import { Container } from 'react-bootstrap';
+import Header from './Compoenets/Header/Header';
+import SideBar from './Compoenets/Sidebar/Sidebar'
+import HomeScreen from './HomeScreen/HomeScreen';
 function App() {
   return (
-    <div className="App">
+    <>
         <Header/>
-    </div>
+        <div className="app__container border border-info">
+          <SideBar/>
+          <Container fluid className="app__main border border-warning">
+            <HomeScreen/>
+          </Container>
+        </div>
+    </>
   );
 }
 
