@@ -1,14 +1,19 @@
 import React from "react";
-import './header.scss'
+import "./header.scss";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { MdNotifications, MdApps } from "react-icons/md";
 import youtube from "./youtube.png";
-const Header = () => {
+const Header = ({ handleToggleSideBar }) => {
   return (
-    <div className="border border-dark header">
-      <FaBars className="header__menu" size={26} />
+    <div className="header border border-dark">
+      <FaBars
+        size={26}
+        className="header_menu"
+        onClick={() => handleToggleSideBar()}
+      />
       <img src={youtube} alt="" className="header_logo" />
+
       <form>
         <input type="text" placeholder="Search...." />
         <button type="submit">
